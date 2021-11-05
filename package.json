@@ -16,11 +16,11 @@
     "url": "https://github.com/UnChich/Rich-Web-Development/issues"
   },
   "homepage": "https://github.com/UnChich/Rich-Web-Development#readme",
-  "dependencies": {
-    "bootstrap": "^5.0.1"
-  },
   "devDependencies": {
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^6.0.0",
     "sass": "^1.35.1"
   }
 }

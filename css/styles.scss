@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$light-theme: #f5f5f5;
+$dark-theme: #212121;
+
+body {
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $dark-theme;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: $light-theme;
+    }
+  }
+
+  .navigation {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-between;
+    // mobile properties
+    flex-direction: column;
+    background-color: rgba($color: $dark-theme, $alpha: 0.8);
+    position: absolute;
+    width: 100vw;
+    top: 4rem;
+    transition: all 0.5s ease-in-out;
+    left: -100vw;
+
+    li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(76, 76, 76, 0.5);
+    }
+    a {
+      font-size: 1.125rem;
+      color: $light-theme;
+      cursor: pointer;
+      letter-spacing: 0.1rem;
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem;
+      text-align: center;
+    }
+  }
+
+  .show {
+    left: 0;
+  }
+  .navbar-toggler {
+    .hamburger {
+      width: 1.5rem;
+      height: 0.2rem;
+      background-color: $light-theme;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: "";
+      position: absolute;
+      width: 1.5rem;
+      height: 0.2rem;
+      background: $light-theme;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .hamburger::before {
+      transform: translateY(-0.5rem);
+      height: 0.25rem;
+    }
+
+    .hamburger::after {
+      transform: translateY(0.5rem);
+      height: 0.25rem;
+    }
+  }
+
+  .open .hamburger {
+    background: transparent;
+  }
+
+  .open .hamburger::before {
+    transform: rotate(45deg);
+  }
+
+  .open .hamburger::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.hero {
+  border: 1px solid purple;
+  height: 90vh;
+  background: url(../images/hero-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content-group {
+    color: $light-theme;
+  }
+}
+
+.about-me {
+  height: 80vh;
+  background: $light-theme;
+  color: $dark-theme;
+  border: red 1px solid;
+
+  .about-me-title {
+    border: 1px solid blue;
+    display: flex;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    .navbar-toggler {
+      display: none;
+    }
+  }
+
+  a .hero-main {
+    width: 40vw;
+    height: 100%;
+    margin-top: 0;
+    padding: 0;
+  }
+}
