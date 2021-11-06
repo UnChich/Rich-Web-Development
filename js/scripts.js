@@ -30,3 +30,15 @@ function clearMobileShowClass() {
 }
 
 window.onresize = clearMobileShowClass;
+
+// close nav menu when link clicked
+const links = document.getElementsByClassName("nav-link");
+
+for (let link of links) {
+  link.addEventListener("click", () => {
+    navToggler.classList.remove("open");
+    navMenu.classList.remove("show");
+    menuOpen = false;
+    console.log("successful link click");
+  });
+}
