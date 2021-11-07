@@ -2,6 +2,8 @@
 
 $light-theme: #f5f5f5;
 $dark-theme: #212121;
+$large-screen-padding: 10vw;
+$title-letter-spacing: 0.1rem;
 
 html {
   scroll-behavior: smooth;
@@ -28,6 +30,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: $title-letter-spacing;
 
     a {
       font-size: 1.5rem;
@@ -63,7 +66,7 @@ body {
       font-size: 1.125rem;
       color: $light-theme;
       cursor: pointer;
-      letter-spacing: 0.1rem;
+      letter-spacing: $title-letter-spacing;
       width: 100%;
       height: 100%;
       padding: 0.8rem;
@@ -128,9 +131,13 @@ body {
 
 .hero-main {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .content-group {
-    margin-top: 55%;
+    letter-spacing: $title-letter-spacing;
+    margin-bottom: 20vh;
     color: $light-theme;
     text-align: center;
   }
@@ -171,11 +178,36 @@ body {
 
 @media (min-width: 992px) {
   .navbar {
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    .navigation {
+      background: unset;
+      left: unset;
+      top: unset;
+      position: unset;
+      flex-direction: row;
+      width: 40vw;
+
+      li {
+        border-bottom: none;
+      }
+    }
     .navbar-toggler {
       display: none;
     }
   }
 
+  .hero {
+    .hero-main {
+      justify-content: flex-start;
+
+      .content-group {
+        margin-bottom: unset;
+        margin-left: 12vw;
+      }
+    }
+  }
   a .hero-main {
     width: 40vw;
     height: 100%;
