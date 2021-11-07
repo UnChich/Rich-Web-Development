@@ -3,6 +3,7 @@
 $light-theme: #f5f5f5;
 $dark-theme: #212121;
 $large-screen-padding: 10vw;
+$small-screen-padding: 5vw;
 $title-letter-spacing: 0.1rem;
 
 html {
@@ -145,14 +146,41 @@ body {
 
 .about-me {
   position: relative;
-  height: 80vh;
+  display: flex;
+  flex-direction: column;
   background: $light-theme;
   color: $dark-theme;
-  border: red 1px solid;
 
   .about-me-title {
-    border: 1px solid blue;
+    padding-left: $small-screen-padding;
+  }
+
+  .about-me-section {
+    margin: 0 1rem 1rem 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px #555;
+  }
+
+  .skills-heading {
+    padding-left: $small-screen-padding;
+  }
+
+  .skills-section {
     display: flex;
+    padding: 0 $small-screen-padding 0 $small-screen-padding;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .skill-container {
+      margin: 0.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 10px #555;
+    }
   }
 }
 

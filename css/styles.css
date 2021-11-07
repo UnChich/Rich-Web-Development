@@ -105,13 +105,33 @@ body {
 
 .about-me {
   position: relative;
-  height: 80vh;
+  display: flex;
+  flex-direction: column;
   background: #f5f5f5;
-  color: #212121;
-  border: red 1px solid; }
+  color: #212121; }
   .about-me .about-me-title {
-    border: 1px solid blue;
-    display: flex; }
+    padding-left: 5vw; }
+  .about-me .about-me-section {
+    margin: 0 1rem 1rem 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px #555; }
+  .about-me .skills-heading {
+    padding-left: 5vw; }
+  .about-me .skills-section {
+    display: flex;
+    padding: 0 5vw 0 5vw;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
+    flex-wrap: wrap; }
+    .about-me .skills-section .skill-container {
+      margin: 0.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 10px #555; }
 
 .projects {
   position: relative;
