@@ -2,9 +2,9 @@
 
 $light-theme: #f5f5f5;
 $dark-theme: #212121;
-$large-screen-padding: 10vw;
-$small-screen-padding: 5vw;
+$section-padding: 5vh 5vw 5vh 5vw;
 $title-letter-spacing: 0.1rem;
+$text-color: #696666;
 
 html {
   scroll-behavior: smooth;
@@ -150,36 +150,43 @@ body {
   flex-direction: column;
   background: $light-theme;
   color: $dark-theme;
+  background-image: url(../images/keyboard.jpg);
+  background-size: cover;
+  color: $text-color;
 
-  .about-me-title {
-    padding-left: $small-screen-padding;
-  }
-
-  .about-me-section {
-    margin: 0 1rem 1rem 1rem;
-    padding: 0.5rem;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px 1px #555;
-  }
-
-  .skills-heading {
-    padding-left: $small-screen-padding;
-  }
-
-  .skills-section {
+  .about-me-group {
     display: flex;
-    padding: 0 $small-screen-padding 0 $small-screen-padding;
-    padding-bottom: 2rem;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    .skill-container {
-      margin: 0.3rem;
+    flex-direction: column;
+
+    .about-me-section {
+      background-color: rgba($color: $light-theme, $alpha: 0.9);
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px 1px #555;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .center-image {
+      display: none;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    .skills-section {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 5px;
-      border-radius: 5px;
-      box-shadow: 5px 5px 10px #555;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      .skill-container {
+        margin: 0.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px #555;
+      }
     }
   }
 }
@@ -200,22 +207,34 @@ body {
   top: 0;
 }
 
+.section-padding {
+  padding: $section-padding;
+}
+
+.section-header {
+  margin-top: 0;
+  color: #696666;
+  font-size: 2rem;
+}
+
 .footer {
   height: 30vh;
 }
 
 @media (min-width: 992px) {
+  $section-padding: 10vh 20vw 10vh 20vw;
+
   .navbar {
     justify-content: space-between;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
     .navigation {
       background: unset;
       left: unset;
       top: unset;
       position: unset;
       flex-direction: row;
-      width: 40vw;
+      width: 30vw;
 
       li {
         border-bottom: none;
@@ -241,5 +260,46 @@ body {
     height: 100%;
     margin-top: 0;
     padding: 0;
+  }
+  .about-me {
+    background-image: unset;
+
+    .about-me-group {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .about-me-section {
+        width: 16vw;
+      }
+
+      .center-image {
+        display: unset;
+        background-image: url(../images/keyboard.jpg);
+        background-size: cover;
+        width: 16.5vw;
+        height: 22vw;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .skills-section {
+        flex-direction: row;
+        width: 16vw;
+      }
+    }
+  }
+
+  .section-padding {
+    padding: $section-padding;
+  }
+
+  .section-header {
+    font-size: 2.5rem;
+    margin: 0;
   }
 }
