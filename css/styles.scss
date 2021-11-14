@@ -193,7 +193,63 @@ body {
 
 .projects {
   position: relative;
-  height: 80vh;
+  background: #424242;
+  h2 {
+    color: $light-theme;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color: $light-theme;
+    background: $dark-theme;
+    box-shadow: 5px 5px 10px 1px #555;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+
+    .project-image {
+      height: 28vh;
+    }
+
+    #projectImageOne {
+      background: url(../images/smaller-intro-component-with-sign-up-form.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    #projectImageTwo {
+      background: url(../images/smaller-pod-request-access-landing-page.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .project-description {
+      padding: 0.5rem;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      .project-link-container {
+        border: 3px solid $light-theme;
+        padding: 5px 10px 5px 10px;
+        border-radius: 30px;
+        width: fit-content;
+        .project-link {
+          color: $light-theme;
+          text-decoration: none;
+          font-size: 1.2rem;
+          height: 100%;
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 .contact-me {
@@ -223,6 +279,16 @@ body {
 
 @media (min-width: 992px) {
   $section-padding: 10vh 20vw 10vh 20vw;
+
+  .section-padding {
+    padding: $section-padding;
+  }
+
+  .section-header {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 3rem;
+  }
 
   .navbar {
     justify-content: space-between;
@@ -294,12 +360,35 @@ body {
     }
   }
 
-  .section-padding {
-    padding: $section-padding;
-  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    .project-card {
+      flex-direction: row;
+      padding-bottom: 0;
+      width: 45vw;
+      height: 30vh;
+      .project-image {
+        width: 60%;
+        height: 30vh;
+      }
+      .project-description {
+        width: 40%;
+        order: 1;
+      }
 
-  .section-header {
-    font-size: 2.5rem;
-    margin: 0;
+      #projectImageTwo {
+        order: 2;
+      }
+    }
+
+    .project-card:nth-child(3) {
+      margin-bottom: 4rem;
+    }
+
+    .project-card:nth-child(4) {
+      align-self: flex-end;
+    }
   }
 }
+// end of media query 992px
