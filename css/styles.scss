@@ -5,7 +5,7 @@ $dark-theme: #212121;
 $section-padding: 5vh 5vw 5vh 5vw;
 $title-letter-spacing: 0.1rem;
 $text-color: #696666;
-$highlight-color: #d47c42;
+$highlight-color: #52adeb;
 
 html {
   scroll-behavior: smooth;
@@ -318,14 +318,30 @@ body {
           border: transparent 1px solid;
         }
 
+        .error {
+          outline: #df2525 2px solid;
+          border: transparent 1px solid;
+        }
+
+        .error-message {
+          color: #df2525;
+          font-size: 0.8rem;
+          margin-top: 0.3rem;
+        }
+
         .submit-button {
           color: $light-theme;
-          background-color: $dark-theme;
+          background-color: #444;
           border: none;
           height: 2rem;
           border-radius: 5px;
           font-weight: 600;
           font-size: 1rem;
+          cursor: pointer;
+        }
+
+        .submit-button:hover {
+          background: #666;
         }
       }
     }
@@ -391,6 +407,7 @@ body {
   }
 
   .hero {
+    height: 96vh;
     .hero-main {
       justify-content: flex-start;
 

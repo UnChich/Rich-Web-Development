@@ -224,7 +224,7 @@ body {
           color: #212121;
           font-size: 0.9rem; }
         .contact-me .form-container .contact-me-form .form-group input:focus {
-          outline: #d47c42 2px solid;
+          outline: #52adeb 2px solid;
           border: transparent 1px solid; }
         .contact-me .form-container .contact-me-form .form-group textarea {
           border: #696666 1px solid;
@@ -234,16 +234,26 @@ body {
           font-size: 0.9rem;
           height: 8rem; }
         .contact-me .form-container .contact-me-form .form-group textarea:focus {
-          outline: #d47c42 2px solid;
+          outline: #52adeb 2px solid;
           border: transparent 1px solid; }
+        .contact-me .form-container .contact-me-form .form-group .error {
+          outline: #df2525 2px solid;
+          border: transparent 1px solid; }
+        .contact-me .form-container .contact-me-form .form-group .error-message {
+          color: #df2525;
+          font-size: 0.8rem;
+          margin-top: 0.3rem; }
         .contact-me .form-container .contact-me-form .form-group .submit-button {
           color: #f5f5f5;
-          background-color: #212121;
+          background-color: #444;
           border: none;
           height: 2rem;
           border-radius: 5px;
           font-weight: 600;
-          font-size: 1rem; }
+          font-size: 1rem;
+          cursor: pointer; }
+        .contact-me .form-container .contact-me-form .form-group .submit-button:hover {
+          background: #666; }
     .contact-me .form-container .links-section {
       display: flex;
       justify-content: space-around;
@@ -286,11 +296,13 @@ body {
         border-bottom: none; }
     .navbar .navbar-toggler {
       display: none; }
-  .hero .hero-main {
-    justify-content: flex-start; }
-    .hero .hero-main .content-group {
-      margin-bottom: unset;
-      margin-left: 12vw; }
+  .hero {
+    height: 96vh; }
+    .hero .hero-main {
+      justify-content: flex-start; }
+      .hero .hero-main .content-group {
+        margin-bottom: unset;
+        margin-left: 12vw; }
   a .hero-main {
     width: 40vw;
     height: 100%;
